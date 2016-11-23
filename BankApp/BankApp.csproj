@@ -141,11 +141,14 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Model\Branch_Tables.cs" />
+    <Compile Include="Model\Staff.cs" />
+    <Compile Include="Model\Curr_Conv.cs" />
     <Compile Include="Model\CurrencyObject.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
+    <None Include="Properties\PublishProfiles\ctosobankbot - Web Deploy %282%29.pubxml" />
     <None Include="Properties\PublishProfiles\ctosobankbot - Web Deploy.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>

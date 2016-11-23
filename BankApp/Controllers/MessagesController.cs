@@ -54,6 +54,18 @@ namespace BankApp
 
                 }
 
+                if (userMessage.ToLower().Equals("staff"))
+                {
+                    List<Staff> Staff = await AzureManager.AzureManagerInstance.GetStaff();
+                    endOutput = "";
+                    foreach (Staff t in Staff)
+                    {
+                        endOutput += "Name: " + t.Name;
+                        /*"[" + t.Date + "] Happiness " + t.Happiness + ", Sadness " + t.Sadness + "\n\n";*/
+                    }
+
+                }
+
                 Activity reply = activity.CreateReply(endOutput);
                 await connector.Conversations.ReplyToActivityAsync(reply);
 

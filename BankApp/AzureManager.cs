@@ -14,17 +14,24 @@ namespace BankApp
         private static AzureManager instance;
         private MobileServiceClient client;
         private IMobileServiceTable<Branch_Tables> Branch_Tables;
+        private IMobileServiceTable<Staff> Staff;
 
         private AzureManager()
         {
             this.client = new MobileServiceClient("http://witbottest.azurewebsites.net");
             this.Branch_Tables = this.client.GetTable<Branch_Tables>();
+            this.Staff = this.client.GetTable<Staff>();
          
         }
 
         public async Task<List<Branch_Tables>> GetBranch()
         {
             return await this.Branch_Tables.ToListAsync();
+        }
+
+        public async Task<List<Staff>> GetStaff()
+        {
+            return await this.Staff.ToListAsync();
         }
 
         public MobileServiceClient AzureClient
