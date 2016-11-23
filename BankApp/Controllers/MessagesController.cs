@@ -7,6 +7,9 @@ using System.Web.Http;
 using System.Web.Http.Description;
 using Microsoft.Bot.Connector;
 using Newtonsoft.Json;
+using Microsoft.WindowsAzure.MobileServices;
+using BankApp.Model;
+using System.Collections.Generic;
 
 namespace BankApp
 {
@@ -23,15 +26,38 @@ namespace BankApp
             {
                 HttpClient client = new HttpClient();
 
-                x = await client.GetStringAsync(new Uri("http://api.fixer.io/latest?base=NZD"));
+                //x = await client.GetStringAsync(new Uri("http://api.fixer.io/latest?base=NZD"));
 
                 ConnectorClient connector = new ConnectorClient(new Uri(activity.ServiceUrl));
                 // calculate something for us to return
                 int length = (activity.Text ?? string.Empty).Length;
 
-                // return our reply to the user
-                Activity reply = activity.CreateReply($"You sent {activity.Text} which was {length} characters");
+
+                var userMessage = activity.Text;
+
+                
+
+                string endOutput = "Hello";
+
+                //MobileServiceClient client = AzureManager.AzureManagerInstance.AzureClient;
+
+
+                if (userMessage.ToLower().Equals("branch"))
+                {
+                    List<Branch_Tables> Branch = await AzureManager.AzureManagerInstance.GetBranch();
+                    endOutput = "";
+                    foreach (Branch_Tables t in Branch)
+                    {
+                        endOutput += "Location: " + t.Location;
+                        /*"[" + t.Date + "] Happiness " + t.Happiness + ", Sadness " + t.Sadness + "\n\n";*/
+                    }
+
+                }
+
+                Activity reply = activity.CreateReply(endOutput);
                 await connector.Conversations.ReplyToActivityAsync(reply);
+
+
             }
             else
             {
