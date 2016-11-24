@@ -66,6 +66,48 @@ namespace BankApp
                     }
 
                 }
+                /*---------------------------*/
+                //cards
+
+                if (userMessage.ToLower().Equals("exchange rates"))
+                {
+                    CurrencyObject.RootObject rootObject;
+
+                    rootObject = JsonConvert.DeserializeObject<CurrencyObject.RootObject>(x);
+
+                    string AUD = rootObject.rates.AUD;
+                    string GBP = rootObject.rates.GBP;
+                    string EUR = rootObject.rates.EUR;
+                    string JPY = rootObject.rates.JPY;
+                    string USD = rootObject.rates.USD;
+
+                    Activity replyToConversation = activity.CreateReply("Contoso Exchange Rates");
+                    replyToConversation.Recipient = activity.From;
+                    replyToConversation.Type = "message";
+                    replyToConversation.Attachments = new List<Attachment>();
+
+                    List<CardImage> cardImages = new List<CardImage>();
+                    cardImages.Add(new CardImage(url: "http://vignette1.wikia.nocookie.net/mobius-paradox/images/6/68/Contoso_logo.jpg/revision/latest?cb=20150621174845"));
+
+                    List<CardAction> cardButtons = new List<CardAction>();
+                 
+                    ThumbnailCard plCard = new ThumbnailCard()
+                    {
+                        Title = "The exchange rate for NZD ",
+                        Subtitle = ($"Exchange rate for NZD: \n\n AUD: {AUD} \n\n GBP: {GBP} \n\n EUR: {EUR} \n\n  JPY:{JPY} \n\n USD: {USD}"),
+                        Images = cardImages,
+                        Buttons = cardButtons
+                    };
+
+                    Attachment plAttachment = plCard.ToAttachment();
+                    replyToConversation.Attachments.Add(plAttachment);
+                    await connector.Conversations.SendToConversationAsync(replyToConversation);
+
+                    return Request.CreateResponse(HttpStatusCode.OK);
+
+                }
+
+                /*------------------------------*/
 
                 //checks if message is "staff" and then returns the staff in the database
 
