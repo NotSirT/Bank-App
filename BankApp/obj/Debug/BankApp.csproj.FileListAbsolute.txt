@@ -45,3 +45,4 @@ C:\Users\Triston\documents\visual studio 2015\Projects\BankApp\BankApp\bin\zh-ha
 C:\Users\Triston\documents\visual studio 2015\Projects\BankApp\BankApp\obj\Debug\BankApp.csproj.App.config
 C:\Users\Triston\documents\visual studio 2015\Projects\BankApp\BankApp\obj\Debug\Bot Application1.dll
 C:\Users\Triston\documents\visual studio 2015\Projects\BankApp\BankApp\obj\Debug\Bot Application1.pdb
+C:\Users\Triston\documents\visual studio 2015\Projects\BankApp\BankApp\obj\Debug\BankApp.csprojResolveAssemblyReference.cache

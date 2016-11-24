@@ -7,12 +7,20 @@ namespace BankApp.Model
 {
     public class CurrencyObject
     {
-        public string base_curr { get; set; }
-        public string date { get; set; }
-        public int AUD { get; set; }
-        public int GBP { get; set; }
-        public int EUR { get; set; }
-        public int JPY { get; set; }
-        public int USD { get; set; }
+        public class Rates
+        {
+            public string AUD { get; set; }
+            public string GBP { get; set; }
+            public string EUR { get; set; }
+            public string JPY { get; set; }
+            public string USD { get; set; }
+
+
+        }
+        public class RootObject
+        {
+            public Rates rates { get; set; }
+
+        }
     }
 }

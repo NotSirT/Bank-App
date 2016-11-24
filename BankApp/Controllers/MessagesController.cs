@@ -24,8 +24,35 @@ namespace BankApp
         {
             if (activity.Type == ActivityTypes.Message)
             {
-                //x = await client.GetStringAsync(new Uri("http://api.fixer.io/latest?base=NZD"));
-                ConnectorClient connector = new ConnectorClient(new Uri(activity.ServiceUrl));
+
+                if (userMessage.ToLower().Equals("exchange rates"))
+                {
+                    HttpClient client = new HttpClient();
+                    string x = await client.GetStringAsync(new Uri("http://api.fixer.io/latest?base=NZD"));
+                    ConnectorClient connector = new ConnectorClient(new Uri(activity.ServiceUrl));
+
+
+                    CurrencyObject.RootObject rootObject;
+
+                    rootObject = JsonConvert.DeserializeObject<CurrencyObject.RootObject>(x);
+
+
+
+                    string AUD = rootObject.rates.AUD;
+                    string GBP = rootObject.rates.GBP;
+                    string EUR = rootObject.rates.EUR;
+                    string JPY = rootObject.rates.JPY;
+                    string USD = rootObject.rates.USD;
+
+                    Activity apireply = activity.CreateReply($"Exchange rate for NZD:" + "/n" + "AUD:" + {AUD} +"GBP: " + { GBP} + "/n" + { EUR} +"/n" + "JPY: " + { JPY} +"USD: " + { USD} +"\n");
+                    await connector.Conversations.ReplyToActivityAsync(apireply);
+                }
+                
+
+
+
+
+                /*------------------------------------------------------------------------*/
                 // calculate something for us to return
                 int length = (activity.Text ?? string.Empty).Length;
 
@@ -51,9 +78,9 @@ namespace BankApp
 
                 if (userMessage.ToLower().Equals("staff"))
                 {
-                    List<Staff> Staff = await AzureManager.AzureManagerInstance.GetStaff();
+                    List<Staff> staff = await AzureManager.AzureManagerInstance.GetStaff();
                     endOutput = "";
-                    foreach (Staff t in Staff)
+                    foreach (Staff t in staff)
                     {
                         endOutput += "Name: " + t.Name + "\n\n";
                         /*"[" + t.Date + "] Happiness " + t.Happiness + ", Sadness " + t.Sadness + "\n\n";*/
@@ -61,6 +88,8 @@ namespace BankApp
 
                 }
 
+                
+                //return reply to user
                 Activity reply = activity.CreateReply(endOutput);
                 await connector.Conversations.ReplyToActivityAsync(reply);
 
