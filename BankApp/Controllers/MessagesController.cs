@@ -30,15 +30,14 @@ namespace BankApp
                 ConnectorClient connector = new ConnectorClient(new Uri(activity.ServiceUrl));
 
                 // calculate something for us to return
-
                 int length = (activity.Text ?? string.Empty).Length;
 
                 var userMessage = activity.Text;
-                
-                string endOutput = "Hello, welcome to Contoso type 'help' to list our features";
+
+                // message output is set to this on default 
+                string endOutput = "Hello, welcome to Contoso, \n\n type 'help' to return a list of our features";
 
                 //checks if message is "exchange rates" and then returns the exchange rates against the NZD
-
                 if (userMessage.ToLower().Equals("exchange rates"))
                 {
                     CurrencyObject.RootObject rootObject;
@@ -64,7 +63,6 @@ namespace BankApp
                     foreach (Branch_Tables t in branch)
                     {
                         endOutput += "Location: " + t.Location + "\n\n";
-                        /*"[" + t.Date + "] Happiness " + t.Happiness + ", Sadness " + t.Sadness + "\n\n";*/
                     }
 
                 }
