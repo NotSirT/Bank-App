@@ -25,44 +25,37 @@ namespace BankApp
             if (activity.Type == ActivityTypes.Message)
             {
 
-                if (userMessage.ToLower().Equals("exchange rates"))
-                {
-                    HttpClient client = new HttpClient();
-                    string x = await client.GetStringAsync(new Uri("http://api.fixer.io/latest?base=NZD"));
-                    ConnectorClient connector = new ConnectorClient(new Uri(activity.ServiceUrl));
+                HttpClient client = new HttpClient();
+                string x = await client.GetStringAsync(new Uri("http://api.fixer.io/latest?base=NZD"));
+                ConnectorClient connector = new ConnectorClient(new Uri(activity.ServiceUrl));
 
-
-                    CurrencyObject.RootObject rootObject;
-
-                    rootObject = JsonConvert.DeserializeObject<CurrencyObject.RootObject>(x);
-
-
-
-                    string AUD = rootObject.rates.AUD;
-                    string GBP = rootObject.rates.GBP;
-                    string EUR = rootObject.rates.EUR;
-                    string JPY = rootObject.rates.JPY;
-                    string USD = rootObject.rates.USD;
-
-                    Activity apireply = activity.CreateReply($"Exchange rate for NZD:" + "/n" + "AUD:" + {AUD} +"GBP: " + { GBP} + "/n" + { EUR} +"/n" + "JPY: " + { JPY} +"USD: " + { USD} +"\n");
-                    await connector.Conversations.ReplyToActivityAsync(apireply);
-                }
-                
-
-
-
-
-                /*------------------------------------------------------------------------*/
                 // calculate something for us to return
+
                 int length = (activity.Text ?? string.Empty).Length;
 
                 var userMessage = activity.Text;
                 
                 string endOutput = "Hello, welcome to Contoso type 'help' to list our features";
 
+                //checks if message is "exchange rates" and then returns the exchange rates against the NZD
 
-                //MobileServiceClient client = AzureManager.AzureManagerInstance.AzureClient;
+                if (userMessage.ToLower().Equals("exchange rates"))
+                {
+                    CurrencyObject.RootObject rootObject;
 
+                    rootObject = JsonConvert.DeserializeObject<CurrencyObject.RootObject>(x);
+                  
+                    string AUD = rootObject.rates.AUD;
+                    string GBP = rootObject.rates.GBP;
+                    string EUR = rootObject.rates.EUR;
+                    string JPY = rootObject.rates.JPY;
+                    string USD = rootObject.rates.USD;
+
+                    Activity apireply = activity.CreateReply($"Exchange rate for NZD: \n\n AUD: {AUD} \n\n GBP: {GBP} \n\n EUR: {EUR} \n\n  JPY:{JPY} \n\n USD: {USD}");
+                    await connector.Conversations.ReplyToActivityAsync(apireply);
+                }
+                                                
+                 //checks if message is "branches" and then returns the branches in the database
 
                 if (userMessage.ToLower().Equals("branches"))
                 {
@@ -76,23 +69,22 @@ namespace BankApp
 
                 }
 
+                //checks if message is "staff" and then returns the staff in the database
+
                 if (userMessage.ToLower().Equals("staff"))
                 {
                     List<Staff> staff = await AzureManager.AzureManagerInstance.GetStaff();
                     endOutput = "";
                     foreach (Staff t in staff)
                     {
-                        endOutput += "Name: " + t.Name + "\n\n";
-                        /*"[" + t.Date + "] Happiness " + t.Happiness + ", Sadness " + t.Sadness + "\n\n";*/
+                        endOutput += "Staff Names: \n\n " + t.Name + "\n\n";
                     }
 
                 }
-
                 
                 //return reply to user
                 Activity reply = activity.CreateReply(endOutput);
                 await connector.Conversations.ReplyToActivityAsync(reply);
-
 
             }
             else
