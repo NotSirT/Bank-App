@@ -37,24 +37,7 @@ namespace BankApp
                 // message output is set to this on default 
                 string endOutput = "Hello, welcome to Contoso, \n\n type 'help' to return a list of our features";
 
-                //checks if message is "exchange rates" and then returns the exchange rates against the NZD
-                if (userMessage.ToLower().Equals("exchange rates"))
-                {
-                    CurrencyObject.RootObject rootObject;
-
-                    rootObject = JsonConvert.DeserializeObject<CurrencyObject.RootObject>(x);
-                  
-                    string AUD = rootObject.rates.AUD;
-                    string GBP = rootObject.rates.GBP;
-                    string EUR = rootObject.rates.EUR;
-                    string JPY = rootObject.rates.JPY;
-                    string USD = rootObject.rates.USD;
-
-                    Activity apireply = activity.CreateReply($"Exchange rate for NZD: \n\n AUD: {AUD} \n\n GBP: {GBP} \n\n EUR: {EUR} \n\n  JPY:{JPY} \n\n USD: {USD}");
-                    await connector.Conversations.ReplyToActivityAsync(apireply);
-                }
-                                                
-                 //checks if message is "branches" and then returns the branches in the database
+                
 
                 if (userMessage.ToLower().Equals("branches"))
                 {
@@ -66,9 +49,8 @@ namespace BankApp
                     }
 
                 }
-                /*---------------------------*/
-                //cards
 
+                //checks if message is "exchange rates" and then returns the exchange rates against the NZD in a card
                 if (userMessage.ToLower().Equals("exchange rates"))
                 {
                     CurrencyObject.RootObject rootObject;
@@ -81,7 +63,7 @@ namespace BankApp
                     string JPY = rootObject.rates.JPY;
                     string USD = rootObject.rates.USD;
 
-                    Activity replyToConversation = activity.CreateReply("Contoso Exchange Rates");
+                    Activity replyToConversation = activity.CreateReply("Popular Contoso Exchange Rates");
                     replyToConversation.Recipient = activity.From;
                     replyToConversation.Type = "message";
                     replyToConversation.Attachments = new List<Attachment>();
@@ -93,8 +75,8 @@ namespace BankApp
                  
                     ThumbnailCard plCard = new ThumbnailCard()
                     {
-                        Title = "The exchange rate for NZD ",
-                        Subtitle = ($"Exchange rate for NZD: \n\n AUD: {AUD} \n\n GBP: {GBP} \n\n EUR: {EUR} \n\n  JPY:{JPY} \n\n USD: {USD}"),
+                        Title = "The exchange rate for NZD: ",
+                        Subtitle = ($"AUD: {AUD}          \n\n GBP: {GBP} \n\n EUR: {EUR} \n\n  JPY:{JPY} \n\n USD: {USD}"),
                         Images = cardImages,
                         Buttons = cardButtons
                     };
