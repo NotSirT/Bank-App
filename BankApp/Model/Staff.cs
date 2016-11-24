@@ -17,9 +17,6 @@ namespace BankApp.Model
         [JsonProperty(PropertyName = "Branch")]
         public string Branch { get; set; }
 
-        [JsonProperty(PropertyName = "Position")]
-        public string Prosition { get; set; }
-
         [JsonProperty(PropertyName = "Contact_no")]
         public string Sunday { get; set; }
 

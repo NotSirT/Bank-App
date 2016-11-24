@@ -150,6 +150,7 @@
     <Content Include="packages.config" />
     <None Include="Properties\PublishProfiles\ctosobankbot - Web Deploy %282%29.pubxml" />
     <None Include="Properties\PublishProfiles\ctosobankbot - Web Deploy.pubxml" />
+    <None Include="Properties\PublishProfiles\ctsobankbot - Web Deploy.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

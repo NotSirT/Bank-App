@@ -24,31 +24,26 @@ namespace BankApp
         {
             if (activity.Type == ActivityTypes.Message)
             {
-                HttpClient client = new HttpClient();
-
                 //x = await client.GetStringAsync(new Uri("http://api.fixer.io/latest?base=NZD"));
-
                 ConnectorClient connector = new ConnectorClient(new Uri(activity.ServiceUrl));
                 // calculate something for us to return
                 int length = (activity.Text ?? string.Empty).Length;
 
-
                 var userMessage = activity.Text;
-
                 
+                string endOutput = "Hello, welcome to Contoso type 'help' to list our features";
 
-                string endOutput = "Hello";
 
                 //MobileServiceClient client = AzureManager.AzureManagerInstance.AzureClient;
 
 
-                if (userMessage.ToLower().Equals("branch"))
+                if (userMessage.ToLower().Equals("branches"))
                 {
-                    List<Branch_Tables> Branch = await AzureManager.AzureManagerInstance.GetBranch();
+                    List<Branch_Tables> branch = await AzureManager.AzureManagerInstance.GetBranch();
                     endOutput = "";
-                    foreach (Branch_Tables t in Branch)
+                    foreach (Branch_Tables t in branch)
                     {
-                        endOutput += "Location: " + t.Location;
+                        endOutput += "Location: " + t.Location + "\n\n";
                         /*"[" + t.Date + "] Happiness " + t.Happiness + ", Sadness " + t.Sadness + "\n\n";*/
                     }
 
@@ -60,7 +55,7 @@ namespace BankApp
                     endOutput = "";
                     foreach (Staff t in Staff)
                     {
-                        endOutput += "Name: " + t.Name;
+                        endOutput += "Name: " + t.Name + "\n\n";
                         /*"[" + t.Date + "] Happiness " + t.Happiness + ", Sadness " + t.Sadness + "\n\n";*/
                     }
 

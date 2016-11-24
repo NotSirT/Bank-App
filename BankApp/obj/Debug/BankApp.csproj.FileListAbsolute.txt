@@ -1,48 +1,47 @@
-c:\users\triston\documents\visual studio 2015\Projects\BankApp\BankApp\obj\Debug\BankApp.csprojResolveAssemblyReference.cache
-c:\users\triston\documents\visual studio 2015\Projects\BankApp\BankApp\obj\Debug\BankApp.csproj.App.config
-c:\users\triston\documents\visual studio 2015\Projects\BankApp\BankApp\bin\Bot Application1.dll.config
-c:\users\triston\documents\visual studio 2015\Projects\BankApp\BankApp\bin\Bot Application1.dll
-c:\users\triston\documents\visual studio 2015\Projects\BankApp\BankApp\bin\Bot Application1.pdb
-c:\users\triston\documents\visual studio 2015\Projects\BankApp\BankApp\bin\Autofac.dll
-c:\users\triston\documents\visual studio 2015\Projects\BankApp\BankApp\bin\Chronic.dll
-c:\users\triston\documents\visual studio 2015\Projects\BankApp\BankApp\bin\Microsoft.Bot.Builder.dll
-c:\users\triston\documents\visual studio 2015\Projects\BankApp\BankApp\bin\Microsoft.Bot.Connector.dll
-c:\users\triston\documents\visual studio 2015\Projects\BankApp\BankApp\bin\Microsoft.IdentityModel.Protocol.Extensions.dll
-c:\users\triston\documents\visual studio 2015\Projects\BankApp\BankApp\bin\Microsoft.Rest.ClientRuntime.dll
-c:\users\triston\documents\visual studio 2015\Projects\BankApp\BankApp\bin\Microsoft.WindowsAzure.Configuration.dll
-c:\users\triston\documents\visual studio 2015\Projects\BankApp\BankApp\bin\Microsoft.WindowsAzure.Mobile.dll
-c:\users\triston\documents\visual studio 2015\Projects\BankApp\BankApp\bin\Microsoft.WindowsAzure.Mobile.Ext.dll
-c:\users\triston\documents\visual studio 2015\Projects\BankApp\BankApp\bin\Newtonsoft.Json.dll
-c:\users\triston\documents\visual studio 2015\Projects\BankApp\BankApp\bin\System.IdentityModel.Tokens.Jwt.dll
-c:\users\triston\documents\visual studio 2015\Projects\BankApp\BankApp\bin\System.Net.Http.Extensions.dll
-c:\users\triston\documents\visual studio 2015\Projects\BankApp\BankApp\bin\System.Net.Http.Formatting.dll
-c:\users\triston\documents\visual studio 2015\Projects\BankApp\BankApp\bin\System.Net.Http.Primitives.dll
-c:\users\triston\documents\visual studio 2015\Projects\BankApp\BankApp\bin\System.Web.Http.dll
-c:\users\triston\documents\visual studio 2015\Projects\BankApp\BankApp\bin\System.Web.Http.WebHost.dll
-c:\users\triston\documents\visual studio 2015\Projects\BankApp\BankApp\bin\Autofac.xml
-c:\users\triston\documents\visual studio 2015\Projects\BankApp\BankApp\bin\Microsoft.Bot.Builder.xml
-c:\users\triston\documents\visual studio 2015\Projects\BankApp\BankApp\bin\Microsoft.Bot.Connector.xml
-c:\users\triston\documents\visual studio 2015\Projects\BankApp\BankApp\bin\Microsoft.IdentityModel.Protocol.Extensions.pdb
-c:\users\triston\documents\visual studio 2015\Projects\BankApp\BankApp\bin\Microsoft.IdentityModel.Protocol.Extensions.xml
-c:\users\triston\documents\visual studio 2015\Projects\BankApp\BankApp\bin\Microsoft.Rest.ClientRuntime.xml
-c:\users\triston\documents\visual studio 2015\Projects\BankApp\BankApp\bin\Microsoft.WindowsAzure.Configuration.xml
-c:\users\triston\documents\visual studio 2015\Projects\BankApp\BankApp\bin\Microsoft.WindowsAzure.Mobile.xml
-c:\users\triston\documents\visual studio 2015\Projects\BankApp\BankApp\bin\Microsoft.WindowsAzure.Mobile.Ext.xml
-c:\users\triston\documents\visual studio 2015\Projects\BankApp\BankApp\bin\Newtonsoft.Json.xml
-c:\users\triston\documents\visual studio 2015\Projects\BankApp\BankApp\bin\System.IdentityModel.Tokens.Jwt.pdb
-c:\users\triston\documents\visual studio 2015\Projects\BankApp\BankApp\bin\System.IdentityModel.Tokens.Jwt.xml
-c:\users\triston\documents\visual studio 2015\Projects\BankApp\BankApp\bin\System.Net.Http.Extensions.xml
-c:\users\triston\documents\visual studio 2015\Projects\BankApp\BankApp\bin\System.Net.Http.Formatting.xml
-c:\users\triston\documents\visual studio 2015\Projects\BankApp\BankApp\bin\System.Net.Http.Primitives.xml
-c:\users\triston\documents\visual studio 2015\Projects\BankApp\BankApp\bin\System.Web.Http.xml
-c:\users\triston\documents\visual studio 2015\Projects\BankApp\BankApp\bin\System.Web.Http.WebHost.xml
-c:\users\triston\documents\visual studio 2015\Projects\BankApp\BankApp\bin\ar\Microsoft.Bot.Builder.resources.dll
-c:\users\triston\documents\visual studio 2015\Projects\BankApp\BankApp\bin\en\Microsoft.Bot.Builder.resources.dll
-c:\users\triston\documents\visual studio 2015\Projects\BankApp\BankApp\bin\es\Microsoft.Bot.Builder.resources.dll
-c:\users\triston\documents\visual studio 2015\Projects\BankApp\BankApp\bin\fa\Microsoft.Bot.Builder.resources.dll
-c:\users\triston\documents\visual studio 2015\Projects\BankApp\BankApp\bin\fr\Microsoft.Bot.Builder.resources.dll
-c:\users\triston\documents\visual studio 2015\Projects\BankApp\BankApp\bin\ja\Microsoft.Bot.Builder.resources.dll
-c:\users\triston\documents\visual studio 2015\Projects\BankApp\BankApp\bin\ru\Microsoft.Bot.Builder.resources.dll
-c:\users\triston\documents\visual studio 2015\Projects\BankApp\BankApp\bin\zh-hans\Microsoft.Bot.Builder.resources.dll
-c:\users\triston\documents\visual studio 2015\Projects\BankApp\BankApp\obj\Debug\Bot Application1.dll
-c:\users\triston\documents\visual studio 2015\Projects\BankApp\BankApp\obj\Debug\Bot Application1.pdb
+C:\Users\Triston\documents\visual studio 2015\Projects\BankApp\BankApp\bin\Bot Application1.dll.config
+C:\Users\Triston\documents\visual studio 2015\Projects\BankApp\BankApp\bin\Bot Application1.dll
+C:\Users\Triston\documents\visual studio 2015\Projects\BankApp\BankApp\bin\Bot Application1.pdb
+C:\Users\Triston\documents\visual studio 2015\Projects\BankApp\BankApp\bin\Autofac.dll
+C:\Users\Triston\documents\visual studio 2015\Projects\BankApp\BankApp\bin\Chronic.dll
+C:\Users\Triston\documents\visual studio 2015\Projects\BankApp\BankApp\bin\Microsoft.Bot.Builder.dll
+C:\Users\Triston\documents\visual studio 2015\Projects\BankApp\BankApp\bin\Microsoft.Bot.Connector.dll
+C:\Users\Triston\documents\visual studio 2015\Projects\BankApp\BankApp\bin\Microsoft.IdentityModel.Protocol.Extensions.dll
+C:\Users\Triston\documents\visual studio 2015\Projects\BankApp\BankApp\bin\Microsoft.Rest.ClientRuntime.dll
+C:\Users\Triston\documents\visual studio 2015\Projects\BankApp\BankApp\bin\Microsoft.WindowsAzure.Configuration.dll
+C:\Users\Triston\documents\visual studio 2015\Projects\BankApp\BankApp\bin\Microsoft.WindowsAzure.Mobile.dll
+C:\Users\Triston\documents\visual studio 2015\Projects\BankApp\BankApp\bin\Microsoft.WindowsAzure.Mobile.Ext.dll
+C:\Users\Triston\documents\visual studio 2015\Projects\BankApp\BankApp\bin\Newtonsoft.Json.dll
+C:\Users\Triston\documents\visual studio 2015\Projects\BankApp\BankApp\bin\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\Triston\documents\visual studio 2015\Projects\BankApp\BankApp\bin\System.Net.Http.Extensions.dll
+C:\Users\Triston\documents\visual studio 2015\Projects\BankApp\BankApp\bin\System.Net.Http.Formatting.dll
+C:\Users\Triston\documents\visual studio 2015\Projects\BankApp\BankApp\bin\System.Net.Http.Primitives.dll
+C:\Users\Triston\documents\visual studio 2015\Projects\BankApp\BankApp\bin\System.Web.Http.dll
+C:\Users\Triston\documents\visual studio 2015\Projects\BankApp\BankApp\bin\System.Web.Http.WebHost.dll
+C:\Users\Triston\documents\visual studio 2015\Projects\BankApp\BankApp\bin\Autofac.xml
+C:\Users\Triston\documents\visual studio 2015\Projects\BankApp\BankApp\bin\Microsoft.Bot.Builder.xml
+C:\Users\Triston\documents\visual studio 2015\Projects\BankApp\BankApp\bin\Microsoft.Bot.Connector.xml
+C:\Users\Triston\documents\visual studio 2015\Projects\BankApp\BankApp\bin\Microsoft.IdentityModel.Protocol.Extensions.pdb
+C:\Users\Triston\documents\visual studio 2015\Projects\BankApp\BankApp\bin\Microsoft.IdentityModel.Protocol.Extensions.xml
+C:\Users\Triston\documents\visual studio 2015\Projects\BankApp\BankApp\bin\Microsoft.Rest.ClientRuntime.xml
+C:\Users\Triston\documents\visual studio 2015\Projects\BankApp\BankApp\bin\Microsoft.WindowsAzure.Configuration.xml
+C:\Users\Triston\documents\visual studio 2015\Projects\BankApp\BankApp\bin\Microsoft.WindowsAzure.Mobile.xml
+C:\Users\Triston\documents\visual studio 2015\Projects\BankApp\BankApp\bin\Microsoft.WindowsAzure.Mobile.Ext.xml
+C:\Users\Triston\documents\visual studio 2015\Projects\BankApp\BankApp\bin\Newtonsoft.Json.xml
+C:\Users\Triston\documents\visual studio 2015\Projects\BankApp\BankApp\bin\System.IdentityModel.Tokens.Jwt.pdb
+C:\Users\Triston\documents\visual studio 2015\Projects\BankApp\BankApp\bin\System.IdentityModel.Tokens.Jwt.xml
+C:\Users\Triston\documents\visual studio 2015\Projects\BankApp\BankApp\bin\System.Net.Http.Extensions.xml
+C:\Users\Triston\documents\visual studio 2015\Projects\BankApp\BankApp\bin\System.Net.Http.Formatting.xml
+C:\Users\Triston\documents\visual studio 2015\Projects\BankApp\BankApp\bin\System.Net.Http.Primitives.xml
+C:\Users\Triston\documents\visual studio 2015\Projects\BankApp\BankApp\bin\System.Web.Http.xml
+C:\Users\Triston\documents\visual studio 2015\Projects\BankApp\BankApp\bin\System.Web.Http.WebHost.xml
+C:\Users\Triston\documents\visual studio 2015\Projects\BankApp\BankApp\bin\ar\Microsoft.Bot.Builder.resources.dll
+C:\Users\Triston\documents\visual studio 2015\Projects\BankApp\BankApp\bin\en\Microsoft.Bot.Builder.resources.dll
+C:\Users\Triston\documents\visual studio 2015\Projects\BankApp\BankApp\bin\es\Microsoft.Bot.Builder.resources.dll
+C:\Users\Triston\documents\visual studio 2015\Projects\BankApp\BankApp\bin\fa\Microsoft.Bot.Builder.resources.dll
+C:\Users\Triston\documents\visual studio 2015\Projects\BankApp\BankApp\bin\fr\Microsoft.Bot.Builder.resources.dll
+C:\Users\Triston\documents\visual studio 2015\Projects\BankApp\BankApp\bin\ja\Microsoft.Bot.Builder.resources.dll
+C:\Users\Triston\documents\visual studio 2015\Projects\BankApp\BankApp\bin\ru\Microsoft.Bot.Builder.resources.dll
+C:\Users\Triston\documents\visual studio 2015\Projects\BankApp\BankApp\bin\zh-hans\Microsoft.Bot.Builder.resources.dll
+C:\Users\Triston\documents\visual studio 2015\Projects\BankApp\BankApp\obj\Debug\BankApp.csproj.App.config
+C:\Users\Triston\documents\visual studio 2015\Projects\BankApp\BankApp\obj\Debug\Bot Application1.dll
+C:\Users\Triston\documents\visual studio 2015\Projects\BankApp\BankApp\obj\Debug\Bot Application1.pdb

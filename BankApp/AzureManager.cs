@@ -18,7 +18,7 @@ namespace BankApp
 
         private AzureManager()
         {
-            this.client = new MobileServiceClient("http://ctosobankbot.azurewebsites.net");
+            this.client = new MobileServiceClient("http://contos0.azurewebsites.net");
             this.Branch_Tables = this.client.GetTable<Branch_Tables>();
             this.Staff = this.client.GetTable<Staff>();
          

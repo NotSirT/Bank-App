@@ -9,7 +9,7 @@ namespace BankApp.Model
 {
     public class Branch_Tables
     {
-        [JsonProperty(PropertyName = "Id")]
+        [JsonProperty(PropertyName = "id")]
         public string ID { get; set; }
 
         [JsonProperty(PropertyName = "Monday")]
