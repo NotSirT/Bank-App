@@ -18,7 +18,7 @@ namespace BankApp
 
         private AzureManager()
         {
-            this.client = new MobileServiceClient("http://contos0.azurewebsites.net");
+            this.client = new MobileServiceClient("http://ctsbb.azurewebsites.net");
             this.Branch_Tables = this.client.GetTable<Branch_Tables>();
             this.Staff_Table = this.client.GetTable<Staff>();
         }
@@ -50,7 +50,7 @@ namespace BankApp
                 return instance;
             }
         }
-         
+
     }
-   
+
 }

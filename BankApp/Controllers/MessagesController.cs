@@ -52,7 +52,7 @@ namespace BankApp
                     {
                         string msgstaff = userMessage.ToLower().Substring(11);
                         endOutput = msgstaff;
-                        List<Staff> staff= await AzureManager.AzureManagerInstance.GetStaff();
+                        List<Staff> staff = await AzureManager.AzureManagerInstance.GetStaff();
                         endOutput = "";
                         int count = 0;
                         foreach (Staff t in staff)
@@ -89,8 +89,8 @@ namespace BankApp
                 }
 
 
-                    // checks the messsage to see if it equals "branches" if so, return the location of all branches in the DB
-                    if (userMessage.ToLower().Equals("branches"))
+                // checks the messsage to see if it equals "branches" if so, return the location of all branches in the DB
+                if (userMessage.ToLower().Equals("branches"))
                 {
                     List<Branch_Tables> branch = await AzureManager.AzureManagerInstance.GetBranch();
                     endOutput = "";
@@ -99,47 +99,45 @@ namespace BankApp
                         endOutput += "Location: " + t.Location + "\n\n";
                     }
                 }
-
-                if (userMessage.ToLower().Equals("branches"))
-
-                //checks if message is "exchange rates" and then returns the exchange rates against the NZD in a card
-                if (userMessage.ToLower().Equals("exchange rates"))
-                {
-                    CurrencyObject.RootObject rootObject;
-
-                    rootObject = JsonConvert.DeserializeObject<CurrencyObject.RootObject>(x);
-
-                    string AUD = rootObject.rates.AUD;
-                    string GBP = rootObject.rates.GBP;
-                    string EUR = rootObject.rates.EUR;
-                    string JPY = rootObject.rates.JPY;
-                    string USD = rootObject.rates.USD;
-
-                    Activity replyToConversation = activity.CreateReply("Popular Contoso Exchange Rates");
-                    replyToConversation.Recipient = activity.From;
-                    replyToConversation.Type = "message";
-                    replyToConversation.Attachments = new List<Attachment>();
-
-                    List<CardImage> cardImages = new List<CardImage>();
-                    cardImages.Add(new CardImage(url: "http://vignette1.wikia.nocookie.net/mobius-paradox/images/6/68/Contoso_logo.jpg/revision/latest?cb=20150621174845"));
-
-                    List<CardAction> cardButtons = new List<CardAction>();
-                 
-                    ThumbnailCard plCard = new ThumbnailCard()
+           
+                    //checks if message is "exchange rates" and then returns the exchange rates against the NZD in a card
+                    if (userMessage.ToLower().Equals("exchange rates"))
                     {
-                        Title = "The exchange rate for NZD: ",
-                        Subtitle = ($"AUD: {AUD} \n\n GBP: {GBP} \n\n EUR: {EUR} \n\n  JPY:{JPY} \n\n USD: {USD}"),
-                        Images = cardImages,
-                        Buttons = cardButtons
-                    };
+                        CurrencyObject.RootObject rootObject;
 
-                    Attachment plAttachment = plCard.ToAttachment();
-                    replyToConversation.Attachments.Add(plAttachment);
-                    await connector.Conversations.SendToConversationAsync(replyToConversation);
+                        rootObject = JsonConvert.DeserializeObject<CurrencyObject.RootObject>(x);
 
-                    return Request.CreateResponse(HttpStatusCode.OK);
+                        string AUD = rootObject.rates.AUD;
+                        string GBP = rootObject.rates.GBP;
+                        string EUR = rootObject.rates.EUR;
+                        string JPY = rootObject.rates.JPY;
+                        string USD = rootObject.rates.USD;
 
-                }
+                        Activity replyToConversation = activity.CreateReply("Popular Contoso Exchange Rates");
+                        replyToConversation.Recipient = activity.From;
+                        replyToConversation.Type = "message";
+                        replyToConversation.Attachments = new List<Attachment>();
+
+                        List<CardImage> cardImages = new List<CardImage>();
+                        cardImages.Add(new CardImage(url: "http://vignette1.wikia.nocookie.net/mobius-paradox/images/6/68/Contoso_logo.jpg/revision/latest?cb=20150621174845"));
+
+                        List<CardAction> cardButtons = new List<CardAction>();
+
+                        ThumbnailCard plCard = new ThumbnailCard()
+                        {
+                            Title = "The exchange rate for NZD: ",
+                            Text = ($"AUD: {AUD} \n\n GBP: {GBP} \n\n EUR: {EUR} \n\n  JPY:{JPY} \n\n USD: {USD}"),
+                            Images = cardImages,
+                            Buttons = cardButtons
+                        };
+
+                        Attachment plAttachment = plCard.ToAttachment();
+                        replyToConversation.Attachments.Add(plAttachment);
+                        await connector.Conversations.SendToConversationAsync(replyToConversation);
+
+                        return Request.CreateResponse(HttpStatusCode.OK);
+
+                    }
 
                 //checks if message is "staff" and then returns the staff in the database
 
@@ -153,7 +151,7 @@ namespace BankApp
                     }
 
                 }
-                
+
                 //return reply to user
                 Activity reply = activity.CreateReply(endOutput);
                 await connector.Conversations.ReplyToActivityAsync(reply);
